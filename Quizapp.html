@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+        h1{
+            margin-block: 100%;
+            background-color: aquamarine;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            body{
+                background-color: aliceblue;
+            }
+        </style>
+        <title>Quizing</title>
+        <script>
+                function validateForm() {
+                  var x = document.forms["myForm"]["name"]["mail"]["no"].value;
+                  if (x == "") {
+                    alert("Name must be filled out");
+                    return false;
+                  }
+                    else{
+                        alert("Logged in successfully");
+                        }
+                  }
+                </script>
+    </head>
+</html>
+<body>   
+    <span>
+        <h1>Quizzing World</h1>
+    </span>
+    <h2>REGISTER</h2>
+    <form name="myForm" action=quest.html onsubmit="return validateForm()" method="post">
+        First name:
+        <input type="text" name="name" required>
+        <br><br>
+        Email:
+        <input type="text " name="mail" required>
+        <br><br>
+        Roll Number:
+        <input type="text" name="no" required>
+        <br><br>
+        <button>SUBMIT<a href="file:///E:/MCA3/web18mca7/quest.html"></a></button>
+
+</body>
+</html>

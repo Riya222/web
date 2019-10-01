@@ -1,0 +1,70 @@
+<html>
+<head>
+    <style>
+        .topnav {
+            background-color: red;
+            overflow: hidden;
+          }
+          .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+          }h1 {
+            background-color: rgb(7, 82, 7);
+          }
+          
+          div {
+            background-color: rgb(202, 9, 170);
+          }
+          
+          p {
+            background-color: yellow;
+          }
+
+
+.item1 { grid-area: Brands; }
+.item2 { grid-area: Announcements; }
+.item3 { grid-area: News; }
+.item4{ grid-area: Right; }
+.item5{ grid-area: footer; }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 20px;
+  background-color: #2196F3;
+  padding: 15px;
+}
+
+.grid-container > 
+div {
+  background-color: rgba(226, 44, 44, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+     <div class="topnavi">
+        <a class="active" href="carhomehome.html">Home</a>
+        <a href="models.html">Models</a>
+        <a href="delears.html">Dealers</a>
+        <a href="contact.html">Contacts</a>
+    </div>
+    <h1>Latest Informations</h1>
+    <div class="grid-container">
+      <div class="item1">Brands</div>
+      <div class="item2">Announcements</div>
+      <div class="item3">News</div>  
+      <div class="item4">Right</div>
+      <div class="item5">Footer</div>
+    </div>
+</body>
+</html>    
+             

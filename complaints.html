@@ -1,0 +1,146 @@
+<html> 
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=6">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+<style>
+                .topnav {
+                    background-color: red;
+                    overflow: hidden;
+                  }
+                  .topnav a {
+                    float: left;
+                    
+                    text-align: center;
+                    padding: 30px 30px;
+                    text-decoration: none;
+                    font-size: 30px;
+                  }h1 {
+                    background-color: rgb(108, 10, 236);
+                  }
+                  body  {
+                background-image:url(comp.jpg);
+                background-color: #cccccc;
+                }
+				 
+           .footer {
+   position:10px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:black;
+   color: white;
+   text-align: center;
+}
+p
+{
+    text-align:justify;
+    }
+
+h5
+{
+    text-align:justify;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  }
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+ </style>          
+<script> 
+function formval()                                    
+{ 
+    var name = document.forms["CompForm"]["Name"];               
+    var email = document.forms["CompForm"]["EMail"];    
+    var what =  document.forms["CompForm"]["Models"];  
+    var gender = document.forms["CompForm"]["gender"];  
+    
+    if (name.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    }  
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+    if (what.selectedIndex < 1)                  
+    { 
+        alert("Please select a model."); 
+        what.focus(); 
+        return false; 
+    } 
+   alert("your complaint is accepted");
+    return true; 
+}</script> 
+<body> 
+    <div class="topnav">
+        <a class="active" href="carhome.html">Home</a>
+        <a href="models.html">Models</a>
+        <a href="delears.html">Dealers</a>
+        <a href="complaints.html">Complaints</a>
+    </div>
+
+<h1 style="text-align: center"> Complaint FORM </h1>           
+<form name="CompForm" action="/submit.php" onsubmit="return formval()" method="post">  
+  <p>Name: <input type="text" size=65 name="Name"> </p><br>        
+  <p>E-mail: <input type="text" size=65 name="EMail">  </p><br> 
+  <p>Gender:<input type="radio" name="gender" value="male" > Male<br>
+            <input type="radio" name="gender" value="female"> Female</p><br>  
+  <p>SELECT YOUR Model    
+      <select name="Models"> 
+          <option>BMW Series 5</option> 
+          <option>BMW series 6</option> 
+          <option>X7 model</option> 
+       </select></p><br><br> 
+  <p>Complaints:  <textarea cols="55" name="Complaints">  </textarea></p> 
+  <p><input type="submit" value="Submit" name="Submit"> </p>          
+
+<div class="footer">
+  
+  <center><h4>For More details contact:</h4></center>
+  
+  <h5>Gmail: riyajofi@gmail.com</h5>
+ 
+  <p> Phone: 9067765566</p>
+ <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+</div> 
+</form>
+</body> 
+</html> 

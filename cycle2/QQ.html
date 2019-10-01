@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>
+            Questions
+        </title>
+    </head>
+    <style>
+       body{
+           text-align: justify;
+           font-size: 15px;
+           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       } 
+       h2.quizScore{
+          font-family:Georgia, 'Times New Roman', Times, serif;
+          font-size:25px;
+        }
+    </style>
+    
+    <body style="background-color: rgb(29, 230, 230)">
+           
+        <h1>HERE IS THE QUESTIONS TO SOLVE.....!!!!</h1>
+        <br><br>
+        
+     <p class="questn">   1. Who is the prime minister of India?</p>
+        <br> <br>
+        <span>
+                <input type="radio" name="one" value="0"> Manmohan Singh
+                
+                <input type="radio" name="one" value="1"> Narendra Modi
+
+                <input type="radio" name="one" value="0">Rajnath Singh
+                <br><br>
+        </span>
+        <p class="questn">  2. How many states in India?</p>
+        <br><br>
+        <span>
+                <input type="radio" name="tw" value="0"> 27
+                <input type="radio" name="tw" value="0"> 29
+                <input type="radio" name="tw" value="1">28
+        </span>
+        
+        <br>
+        <br>
+        <button onclick="fun()">SUBMIT</button>
+        <div>
+            <h2 class="quizScore" id="userScore"></h2>
+        </div>
+        </div>
+    </form>
+        <script>
+                function fun()
+                {
+                    console.log("Submitted successfully")
+                function answerScore (qName) {
+            var radiosNo = document.getElementsByName(qName);
+
+            for (var i = 0, length = radiosNo.length; i < length; i++) {
+                if (radiosNo[i].checked) {
+            // do something with radiosNo
+                    var answerValue = Number(radiosNo[i].value);
+                }
+            }
+            // change NaNs to zero
+            if (isNaN(answerValue)) {
+                answerValue = 0;
+            }
+            return answerValue;
+        }
+
+    // calc score with answerScore function
+        var calcScore = (answerScore('one') + answerScore('tw'));
+        console.log("CalcScore: " + calcScore); // it works!
+// calculate "possible score" integer
+// + answerScore('q3') + answerScore('q4')
+var questionCountArray = document.getElementsByClassName('questn');
+
+var questionCounter = 0;
+for (var i = 0, length = questionCountArray.length; i < length; i++) {
+    questionCounter++;
+}
+
+// show score as "score/possible score"
+var showScore = "Your Score: " + calcScore +"/" + questionCounter + "<br>"+ "<br>" +" Best wishes for next time...!!!";
+// if 4/4, "perfect score!"
+if (calcScore === questionCounter) {
+    showScore = showScore + "&nbsp; <strong>Thank You!!!!!</strong>"
+  
+};
+document.getElementById('userScore').innerHTML = showScore;
+
+            }
+            </script>
+       
+    </body>
+</html>

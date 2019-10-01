@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Reverse a string</title>
+</head>
+<body>
+	<script>
+	  function ReverseString(str)
+    {
+      if(!str || str.length<2 || typeof str!=='string')
+      {
+       return 'not valid';
+      }
+      const reArray=[];
+      const length=str.length-1;
+      for(let i=length;i>=0;i--)
+       {
+         reArray.push(str[i]);
+       }       
+         return reArray.join('');
+      }
+       document .write(ReverseString('Believe in yourself'))
+  </script>
+</body>
+</html>  
