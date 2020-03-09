@@ -1,6 +1,7 @@
-#creating account 
-##Then created an empty repository
-# Cloning a repository and branching
+# Git Documentation
+## Creating account<br/> 
+## Then created an empty repository
+## Cloning a repository 
 ## Cloning that repository into our local system
 ```git clone repository url```
 A folder named "SD" is created
@@ -15,8 +16,7 @@ Pushing the changes into master using ```git push origin master```
 
 Checkout the branch using ```git checkout -b BRANCH NAME```
 
-##Merging 
+## Merging 
 
 Merge the branch using ```git merge BRANCH NAME```. Now the created branch is merged with the master node.
 Now the changes can be viewed using a graph with the command ``` git log --graph```.
-
